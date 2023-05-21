@@ -1,5 +1,5 @@
 import java.util.*;
-public class TTT2 {
+public class TTT {
     static ArrayList<Integer> playerPos = new ArrayList<>();
     static ArrayList<Integer> cpuPos = new ArrayList<>();
 
