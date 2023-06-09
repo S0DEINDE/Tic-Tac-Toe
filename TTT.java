@@ -36,12 +36,11 @@ public class TTT {
             display(Board);
 
             dub = Winner();
-            if(dub.contains("Congratulations you won!") || dub.contains("Computer wins! Sorry play again!")){
+            if (dub.contains("Congratulations you won!") || dub.contains("Computer wins! Sorry play again!")) {
                 System.out.println(dub);
                 System.out.println("Thanks for playing my game, play again sometime!");
                 break;
-            }
-            else if(dub.contains("CAT")){
+            } else if (dub.contains("CAT")) {
                 System.out.println(dub);
                 System.out.println("Thanks for playing my game, play again sometime!");
                 break;
@@ -63,10 +62,10 @@ public class TTT {
         char symbol = ' ';
 
         if (user.equals("player")) {
-            symbol = 'X';
+            symbol = '❌';
             playerPos.add(spot);
         } else if (user.equals("computer")) {
-            symbol = 'O';
+            symbol = '⭕';
             cpuPos.add(spot);
         }
         switch (spot) {
@@ -95,7 +94,7 @@ public class TTT {
         List<Integer> Cross1 = Arrays.asList(1, 5, 9);
         List<Integer> Cross2 = Arrays.asList(7, 5, 3);
 
-       List<List> winning = new ArrayList<>();
+        List<List> winning = new ArrayList<>();
         winning.add(top);
         winning.add(mid);
         winning.add(bottom);
@@ -109,14 +108,10 @@ public class TTT {
                 return "Congratulations you won!";
             } else if (cpuPos.containsAll(l)) {
                 return "Computer wins! Sorry play again!";
-            } else if ((playerPos.size() + cpuPos.size()) >= 9 ){
+            } else if ((playerPos.size() + cpuPos.size()) >= 9) {
                 return "CAT!";
             }
-        }System.out.println(playerPos.size());
-        System.out.println(cpuPos.size());
-
-
-
+        }
         return " ";
     }
 }
